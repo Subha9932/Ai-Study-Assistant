@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভর্তি বিজ্ঞাপন: লালপুর দিল্লী মিশন পাবলিক স্কুল</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for better Bengali rendering and overall aesthetic */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif+Bengali:wght@100..900&display=swap');
+        
+        /* Apply Bengali font to elements where Bengali text dominates */
+        .bengali-font {
+            font-family: 'Noto Serif Bengali', serif;
+        }
+
+        /* Simulate A4 paper feel on large screens */
+        .a4-container {
+            max-width: 21cm; /* A4 width */
+            min-height: 29.7cm; /* A4 height */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            margin: 2rem auto;
+            /* Thicker, main border for a robust frame */
+            border: 5px solid #000; 
+            position: relative; /* Essential for pseudo-element */
+            overflow: visible;
+            /* Added border radius for a softer, more elegant look */
+            border-radius: 1rem; 
+        }
+        
+        /* --- Attractive Inner Border (Pseudo-element for double framing) --- */
+        .a4-container::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            /* Dashed border for an attractive, certificate-style frame */
+            border: 3px dashed #000; 
+            pointer-events: none;
+            border-radius: 0.5rem;
+            z-index: 15;
+        }
+        
+        /* Ensure the main content uses a serif font for a classic document feel, while titles uses sans-serif (Inter) */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* Decorative separator */
+        .separator {
+            height: 2px;
+            width: 80%;
+            background-color: #000;
+            margin: 1.5rem auto;
+        }
+        
+        /* Content padding is adjusted to prevent overlap with the decorative frame */
+        .a4-container-content {
+            padding: 30px; 
+            position: relative;
+            z-index: 20;
+        }
+        @media (min-width: 768px) {
+             .a4-container-content {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-black">
+
+    <div class="a4-container bg-white">
+        
+        <!-- NOTE: Flower border corner divs removed as the new decorative frame is handled by ::before pseudo-element -->
+
+        <div class="a4-container-content p-6 md:p-10 lg:p-16">
+        
+            <!-- HEADER / ADVERTISEMENT TITLE -->
+            <header class="text-center pb-6 border-b-4 border-black">
+                <!-- LOGO ADDED -->
+                <img src="https://thumbs.dreamstime.com/b/traditional-indian-woman-playing-sitar-detailed-black-white-woodcut-style-indian-girl-playing-guitar-linocut-297941753.jpg" 
+                    alt="School Emblem: Traditional Indian Sitar Player"
+                    class="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-black object-cover p-1 shadow-md"
+                    onerror="this.onerror=null; this.src='https://placehold.co/80x80/000/fff?text=Logo+Img';"
+                >
+                <!-- END LOGO -->
+
+                <h1 class="text-xl md:text-2xl font-black uppercase tracking-widest">
+                    ভর্তি বিজ্ঞাপন
+                </h1>
+                <h2 class="bengali-font text-4xl md:text-5xl font-extrabold mt-2">
+                    শিক্ষাবর্ষ ২০২৬
+                </h2>
+                <p class="mt-4 text-gray-700 italic text-lg">
+                    — A New Chapter of Learning Begins —
+                </p>
+            </header>
+
+            <!-- SCHOOL NAME & LOCATION -->
+            <div class="text-center pt-8 pb-4">
+                <h3 class="bengali-font text-3xl md:text-4xl font-bold border-b border-t border-black py-2 inline-block">
+                    লালপুর দিল্লী মিশন পাবলিক স্কুল
+                </h3>
+                <p class="text-xs mt-2 bengali-font text-gray-600">
+                    স্থান: লালপুর, দলাদলি, হুড়া, পুরুলিয়া | Regd: SO2 63171 | UDISE: 19140602106
+                </p>
+            </div>
+
+            <div class="separator"></div>
+
+            <!-- PRINCIPAL'S MESSAGE (HIGHLIGHTED BLOCK) -->
+            <section class="bg-gray-50 p-6 border-2 border-black rounded-xl my-8">
+                <h4 class="bengali-font text-2xl font-bold text-center mb-4 border-b border-black pb-2">
+                    <span class="text-3xl pr-2">★</span> অধ্যক্ষের বার্তা <span class="text-3xl pl-2">★</span>
+                </h4>
+                <blockquote class="bengali-font italic text-center text-base md:text-lg leading-relaxed">
+                    "আমরা কেবল পাঠ্যপুস্তকের শিক্ষায় বিশ্বাসী নই, আমরা চাই প্রতিটি শিশুর সামগ্রিক বিকাশ। আমাদের লক্ষ্য জ্ঞান, সৃজনশীলতা এবং মানবিকতার এক নিবিড় মেলবন্ধন ঘটানো। আপনার সন্তানকে আমাদের পরিবারের অংশ করতে পেরে আমরা গর্বিত হব।"
+                </blockquote>
+            </section>
+
+            <!-- ANNOUNCEMENT BODY -->
+            <section class="my-8 bengali-font text-lg leading-relaxed">
+                <p class="text-center font-semibold mb-6">
+                    সকল শ্রদ্ধেয় অভিভাবক ও শিক্ষানুরাগীদের জানানো হচ্ছে, লালপুর দিল্লী মিশন পাবলিক স্কুলে নতুন শিক্ষাবর্ষের (জানুয়ারী ২০২৬) জন্য ভর্তি প্রক্রিয়া আরম্ভ হয়েছে। শিশু শ্রেণী থেকে নবম শ্রেণী পর্যন্ত ছাত্র-ছাত্রীরা এই সুযোগ গ্রহণ করতে পারবে।
+                </p>
+            </section>
+            
+            <div class="separator bg-gray-300"></div>
+
+            <!-- ACADEMIC & CO-CURRICULAR EXCELLENCE -->
+            <section class="my-8">
+                <h4 class="bengali-font text-3xl font-bold text-center mb-8 bg-black text-white p-2 rounded-full shadow-lg">
+                    একাডেমিক ও সহ-পাঠ্যক্রমিক উৎকর্ষ
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center bengali-font">
+                    
+                    <!-- Point 1: জ্ঞানার্জনের পীঠস্থান -->
+                    <div class="p-4 border-b-2 border-r-2 border-black rounded-tl-lg rounded-br-lg shadow-md">
+                        <div class="text-4xl mb-3">📚</div>
+                        <h5 class="font-bold text-xl mb-2">জ্ঞানার্জনের পীঠস্থান</h5>
+                        <p class="text-sm">আমাদের প্রতিষ্ঠানে শিক্ষার অনুকূল পরিবেশে অভিজ্ঞ শিক্ষকমণ্ডলী দ্বারা পাঠদান করা হয়। আধুনিক প্রযুক্তি ও সমৃদ্ধ লাইব্রেরি ছাত্র-ছাত্রীদের জ্ঞানার্জনের পথকে আরও সুগম করে।</p>
+                    </div>
+
+                    <!-- Point 2: সৃজনশীলতার বিকাশ -->
+                    <div class="p-4 border-b-2 border-l-2 border-black rounded-tr-lg rounded-bl-lg shadow-md">
+                        <div class="text-4xl mb-3">🎨</div>
+                        <h5 class="font-bold text-xl mb-2">সৃজনশীলতার বিকাশ</h5>
+                        <p class="text-sm">আমরা বিশ্বাস করি, প্রতিটি শিশুর মধ্যেই লুকিয়ে আছে এক শিল্পী। তাই সঙ্গীত, অঙ্কন, এবং বিভিন্ন সাংস্কৃতিক কার্যক্রমের মাধ্যমে তাদের সৃজনশীলতার বিকাশে আমরা সর্বদা সচেষ্ট।</p>
+                    </div>
+
+                    <!-- Point 3: শারীরিক ও মানসিক স্বাস্থ্য -->
+                    <div class="p-4 border-t-2 border-r-2 border-black rounded-bl-lg rounded-tr-lg shadow-md">
+                        <div class="text-4xl mb-3">🤸</div>
+                        <h5 class="font-bold text-xl mb-2">শারীরিক ও মানসিক স্বাস্থ্য</h5>
+                        <p class="text-sm">বিশাল খেলার মাঠ এবং বিভিন্ন খেলাধুলার সরঞ্জামের মাধ্যমে ছাত্র-ছাত্রীদের শারীরিক সুস্থতা নিশ্চিত করা হয়। যোগা ও মেডিটেশন ক্লাসের মাধ্যমে মানসিক স্বাস্থ্যের যত্ন নেওয়া হয়।</p>
+                    </div>
+
+                    <!-- Point 4: নিরাপদ আবাসন -->
+                    <div class="p-4 border-t-2 border-l-2 border-black rounded-br-lg rounded-tl-lg shadow-md">
+                        <div class="text-4xl mb-3">🏡</div>
+                        <h5 class="font-bold text-xl mb-2">নিরাপদ আবাসন</h5>
+                        <p class="text-sm">দূরবর্তী ছাত্র ও ছাত্রীদের জন্য আমাদের নিরাপদ, পরিচ্ছন্ন এবং মনোরম হোস্টেলের সুব্যবস্থা রয়েছে, যেখানে বাড়ির মতোই স্নেহ ও যত্নের পরিবেশ নিশ্চিত করা হয়।</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="separator"></div>
+
+            <!-- ADMISSION SCHEDULE & CONTACT (CALL TO ACTION) -->
+            <section class="my-10 bg-white text-black p-6 rounded-xl shadow-2xl border-2 border-black">
+                <h4 class="bengali-font text-3xl font-bold text-center mb-6 border-b border-black pb-3">
+                    ভর্তির সময়সূচী
+                </h4>
+                
+                <div class="flex flex-col md:flex-row justify-around text-center bengali-font space-y-4 md:space-y-0 text-lg">
+                    <div>
+                        <p class="font-semibold text-gray-700">ফর্ম বিতরণ ও জমা দেওয়ার শেষ তারিখ</p>
+                        <p class="text-2xl font-extrabold text-black">২০শে ডিসেম্বর, ২০২৫</p>
+                    </div>
+                    <div class="hidden md:block w-px bg-gray-700 mx-4"></div>
+                    <div>
+                        <p class="font-semibold text-gray-700">নির্বাচনী পরীক্ষার তারিখ</p>
+                        <p class="text-2xl font-extrabold text-black">২১শে ও ২৮শে ডিসেম্বর, ২০২৫ (রবিবার)</p>
+                    </div>
+                </div>
+
+                <!-- CALL TO ACTION -->
+                <p class="bengali-font text-center mt-8 text-xl font-bold">
+                    আপনার সন্তানের একটি উজ্জ্বল ও সুরক্ষিত ভবিষ্যতের জন্য আজই আমাদের সাথে যোগাযোগ করুন। আসন সংখ্যা সীমিত।
+                </p>
+                
+                <!-- CONTACT DETAILS -->
+                <div class="text-center mt-6">
+                    <h5 class="font-bold text-xl mb-2 uppercase tracking-wider text-black">যোগাযোগ</h5>
+                    <p class="text-3xl font-black leading-tight">
+                        9547840137 | 9474000332
+                    </p>
+                    <p class="text-xl font-black mt-1">
+                        8918520539 | 9547058528
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- FOOTER / CLOSING -->
+            <footer class="text-center pt-8 text-sm text-gray-700">
+                <p class="bengali-font">লালপুর দিল্লী মিশন পাবলিক স্কুল — জ্ঞানের আলোয় জীবনের দিশারী।</p>
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
