@@ -1,0 +1,504 @@
+/* ==================== Login Page Container ==================== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.login-container {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== Header Section ==================== */
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a202c;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-header p {
+  font-size: 0.95rem;
+  color: #718096;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==================== Mode Toggle (Login/Register) ==================== */
+.mode-toggle {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  background: #f7fafc;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.mode-toggle button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.mode-toggle button:hover {
+  color: #667eea;
+}
+
+.mode-toggle button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* ==================== Form Styling ==================== */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.auth-form h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.otp-info {
+  text-align: center;
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #edf2f7;
+  border-radius: 8px;
+}
+
+/* ==================== Input Fields ==================== */
+.auth-form input {
+  padding: 14px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2d3748;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.auth-form input::placeholder {
+  color: #a0aec0;
+}
+
+.auth-form input:disabled {
+  background: #edf2f7;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* OTP Input Special Styling */
+.auth-form input[maxLength="6"] {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 8px;
+  padding: 16px;
+}
+
+/* ==================== Buttons ==================== */
+.auth-form button[type="submit"] {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(102, 126, 234, 0.3);
+  margin-top: 8px;
+}
+
+.auth-form button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.auth-form button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Secondary Buttons */
+.link-button,
+.back-button {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.link-button:hover,
+.back-button:hover {
+  background: #edf2f7;
+  color: #5568d3;
+}
+
+.back-button {
+  margin-top: 12px;
+  width: 100%;
+  color: #718096;
+}
+
+/* ==================== Resend Section ==================== */
+.resend-section {
+  text-align: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.resend-section p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.resend-section .link-button {
+  padding: 8px 16px;
+  margin-top: 8px;
+}
+
+/* ==================== Error Message ==================== */
+.error-message {
+  padding: 14px 16px;
+  background: #fed7d7;
+  color: #c53030;
+  border-radius: 10px;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-left: 4px solid #fc8181;
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+/* ==================== Features Section ==================== */
+.login-features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+  gap: 16px;
+}
+
+.feature {
+  text-align: center;
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.feature:hover {
+  background: #f7fafc;
+}
+
+.feature span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+  filter: grayscale(0.3);
+  transition: all 0.3s ease;
+}
+
+.feature:hover span {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.feature p {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ==================== Loading States ==================== */
+.auth-form button[type="submit"]:disabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-form button[type="submit"]:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  to {
+    left: 100%;
+  }
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 640px) {
+  .login-container {
+    padding: 28px 24px;
+    border-radius: 20px;
+  }
+
+  .login-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .login-header p {
+    font-size: 0.9rem;
+  }
+
+  .auth-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .mode-toggle {
+    gap: 8px;
+  }
+
+  .mode-toggle button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .auth-form input {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .auth-form input[maxLength="6"] {
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+  }
+
+  .login-features {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .feature span {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 12px;
+  }
+
+  .login-container {
+    padding: 24px 20px;
+  }
+}
+
+/* ==================== Dark Mode Support (Optional) ==================== */
+@media (prefers-color-scheme: dark) {
+  .login-page {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  }
+
+  .login-container {
+    background: #2d3748;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .login-header h1 {
+    color: #e2e8f0;
+  }
+
+  .login-header p {
+    color: #cbd5e0;
+  }
+
+  .auth-form h2 {
+    color: #e2e8f0;
+  }
+
+  .auth-form input {
+    background: #1a202c;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+
+  .auth-form input:focus {
+    background: #2d3748;
+    border-color: #667eea;
+  }
+
+  .otp-info {
+    background: #1a202c;
+    color: #cbd5e0;
+  }
+
+  .mode-toggle {
+    background: #1a202c;
+  }
+
+  .mode-toggle button {
+    color: #cbd5e0;
+  }
+
+  .feature p {
+    color: #cbd5e0;
+  }
+
+  .back-button {
+    color: #cbd5e0;
+  }
+
+  .resend-section p {
+    color: #cbd5e0;
+  }
+}
+
+/* ==================== Accessibility ==================== */
+.auth-form input:focus-visible,
+.auth-form button:focus-visible,
+.mode-toggle button:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+/* Input hints */
+.input-hint {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* OTP Notice */
+.otp-notice {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.otp-notice strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}

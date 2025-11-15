@@ -1,38 +1,12 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body { font-family: Inter, Arial, sans-serif; background:#f4f6fb; margin:0; }
+.app { max-width: 1000px; margin: 30px auto; padding: 20px; }
+.header { text-align:center; margin-bottom:20px; }
+.header h1 { margin:0; }
+.card { background: #fff; padding: 18px; border-radius: 12px; box-shadow: 0 6px 18px rgba(20,20,50,0.06); margin-bottom:18px; }
+.input-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { background:#3466f2; color:#fff; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+.loader { text-align:center; padding:12px; color:#666; }
+.textarea { width:100%; min-height:120px; padding:10px; border-radius:8px; border:1px solid #e6e9f2; }
+button, input, optgroup, select, textarea {
+    color: #322d2d;
 }
